@@ -37,13 +37,13 @@ public class RecordController {
     @PostMapping("/process")
     public ResponseEntity<String> processProductIds(@RequestBody List<Long> productIds) {
         recordService.processProductIds(productIds);
-        return ResponseEntity.ok("Products processed and events published.");
+        return ResponseEntity.ok("Records processed and events published.");
     }
 
     @PostMapping("/process/v2")
     public ResponseEntity<String> processProductIdsV2(@RequestBody List<Long> productIds) {
         recordService2.executeProductIds(productIds);
-        return ResponseEntity.ok("Products processed and events published.");
+        return ResponseEntity.ok("Records processed and events published.");
     }
 
 
